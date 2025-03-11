@@ -45,8 +45,6 @@ public class Program
                 });
             }
 
-            app.UseAuthentication();
-            app.UseAuthorization();
             app.UseHttpsRedirection();
             app.UseBasicHealthChecks();
             app.MapControllers();

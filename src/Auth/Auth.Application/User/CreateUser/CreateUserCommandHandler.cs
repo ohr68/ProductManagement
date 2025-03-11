@@ -1,11 +1,29 @@
-﻿using MediatR;
+﻿using Auth.ORM.Context;
+using FluentValidation;
+using Mapster;
+using MediatR;
+using ProductManagement.Common.Exceptions;
 
 namespace Auth.Application.User.CreateUser;
 
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, CreateUserResult>
+public class CreateUserCommandHandler(AuthDbContext context, IValidator<CreateUserCommand> validator) : IRequestHandler<CreateUserCommand, CreateUserResult>
 {
-    public Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var validationResult = await validator.ValidateAsync(request, cancellationToken);
+        
+        if(!validationResult.IsValid)
+            throw new ValidationException(validationResult.Errors);
+        
+        var user = request.Adapt<Domain.Entities.User>();
+        
+        await context.Users.AddAsync(user, cancellationToken);
+     
+        var success = await context.SaveChangesAsync(cancellationToken) > 0;
+
+        if (!success)
+            throw new BadRequestException("Houve uma falha ao inserir o usuário.");
+
+        return user.Adapt<CreateUserResult>();
     }
 }
