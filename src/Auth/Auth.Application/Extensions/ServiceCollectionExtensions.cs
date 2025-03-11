@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using Auth.Application.CustomValidators;
+using Auth.Application.Interfaces;
+using FluentValidation;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,7 +21,8 @@ public static class ServiceCollectionExtensions
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationLayer).Assembly));
-
+        services.AddScoped<IPasswordHasher, CustomPasswordHasher>();
+        
         return services;
     }
 

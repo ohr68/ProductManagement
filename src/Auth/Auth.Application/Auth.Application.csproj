@@ -16,11 +16,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Auth\" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <ProjectReference Include="..\..\Common\ProductManagement.Common\ProductManagement.Common.csproj" />
       <ProjectReference Include="..\Auth.Domain\Auth.Domain.csproj" />
+      <ProjectReference Include="..\Auth.Jwt\Auth.Jwt.csproj" />
+      <ProjectReference Include="..\Auth.ORM\Auth.ORM.csproj" />
     </ItemGroup>
 
 </Project>

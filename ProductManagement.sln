@@ -36,7 +36,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.IoC", "src\Auth\Auth.I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{02E5E4DE-CDA5-4CF6-A6CF-9CA5745458B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagement.Common", "ProductManagement.Common\ProductManagement.Common.csproj", "{EB60E46E-8D0D-48E0-BABF-904972F4C78A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagement.Common", "src\Common\ProductManagement.Common\ProductManagement.Common.csproj", "{EB60E46E-8D0D-48E0-BABF-904972F4C78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Jwt", "src\Auth\Auth.Jwt\Auth.Jwt.csproj", "{31D9732D-8853-4D3F-A7F4-514253ACF829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,7 @@ Global
 		{C02AC386-CF20-4B31-8F55-DC0FCCBCFA48} = {76F2B3AB-64E9-41F2-ADFC-A0573EB2CD42}
 		{9A55B025-1306-4F94-AFF8-655E6D453D04} = {2DB50301-C902-431D-A52F-1C900C69F472}
 		{EB60E46E-8D0D-48E0-BABF-904972F4C78A} = {02E5E4DE-CDA5-4CF6-A6CF-9CA5745458B6}
+		{31D9732D-8853-4D3F-A7F4-514253ACF829} = {2DB50301-C902-431D-A52F-1C900C69F472}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BE800269-2717-40C2-9CE9-386518B2CDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -85,5 +88,9 @@ Global
 		{EB60E46E-8D0D-48E0-BABF-904972F4C78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB60E46E-8D0D-48E0-BABF-904972F4C78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB60E46E-8D0D-48E0-BABF-904972F4C78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D9732D-8853-4D3F-A7F4-514253ACF829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D9732D-8853-4D3F-A7F4-514253ACF829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D9732D-8853-4D3F-A7F4-514253ACF829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D9732D-8853-4D3F-A7F4-514253ACF829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -30,7 +30,7 @@ public static class ServiceCollectionExtensions
                     return;
                 }
 
-                var connectionString = configuration.GetConnectionString("HealthMed")!;
+                var connectionString = configuration.GetConnectionString("Auth")!;
                 if (!isDevelopment)
                 {
                     var password = Environment.GetEnvironmentVariable("SA_PASSWORD");
