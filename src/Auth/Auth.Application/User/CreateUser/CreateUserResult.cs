@@ -1,6 +1,3 @@
 ﻿namespace Auth.Application.User.CreateUser;
 
-public class CreateUserResult
-{
-    public int Id { get; set; }
-}
+public record CreateUserResult(int Id);

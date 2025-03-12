@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Auth.Application\Auth.Application.csproj" />
+      <ProjectReference Include="..\Auth.Jwt\Auth.Jwt.csproj" />
       <ProjectReference Include="..\Auth.ORM\Auth.ORM.csproj" />
     </ItemGroup>
 

@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\ProductManagement.Common\ProductManagement.Common.csproj" />
+      <ProjectReference Include="..\..\Common\ProductManagement.Common\ProductManagement.Common.csproj" />
       <ProjectReference Include="..\Auth.IoC\Auth.IoC.csproj" />
       <ProjectReference Include="..\Auth.ORM\Auth.ORM.csproj" />
     </ItemGroup>

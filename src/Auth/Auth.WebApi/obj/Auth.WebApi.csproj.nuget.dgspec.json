@@ -132,6 +132,15 @@
             "projectReferences": {
               "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Domain\\Auth.Domain.csproj": {
                 "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Domain\\Auth.Domain.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj"
               }
             }
           }
@@ -173,7 +182,7 @@
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -287,6 +296,9 @@
               "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Application\\Auth.Application.csproj": {
                 "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Application\\Auth.Application.csproj"
               },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj"
+              },
               "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj": {
                 "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj"
               }
@@ -315,6 +327,90 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj",
+        "projectName": "Auth.Jwt",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\Auth.Jwt.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.Jwt\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
             }
           },
           "imports": [
@@ -455,6 +551,9 @@
               },
               "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj": {
                 "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.ORM\\Auth.ORM.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj"
               }
             }
           }
@@ -512,6 +611,110 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj",
+        "projectName": "ProductManagement.Common",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.7, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Exceptions.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

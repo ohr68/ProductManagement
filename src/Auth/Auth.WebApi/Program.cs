@@ -26,16 +26,14 @@ public class Program
                 });
 
             builder.Services.AddPresentationLayer(builder.Configuration);
-            
-            builder.Services.AddAuthorization();
+            builder.Services.ConfigureServices(builder.Configuration, builder.Environment.IsDevelopment());
+
             builder.Services.AddControllers(options => { options.Filters.Add<GlobalExceptionFilter>(); });
 
             builder.Services.AddEndpointsApiExplorer();
 
             builder.AddBasicHealthChecks();
             
-            builder.Services.ConfigureServices(builder.Configuration, builder.Environment.IsDevelopment());
-
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -47,8 +45,6 @@ public class Program
                 });
             }
 
-            app.UseAuthentication();
-            app.UseAuthorization();
             app.UseHttpsRedirection();
             app.UseBasicHealthChecks();
             app.MapControllers();

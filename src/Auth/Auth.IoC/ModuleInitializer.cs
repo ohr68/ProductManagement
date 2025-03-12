@@ -1,4 +1,5 @@
 ﻿using Auth.Application.Extensions;
+using Auth.Jwt.Extensions;
 using Auth.ORM.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,7 @@ public static class ModuleInitializer
         bool isDevelopment = false)
     {
         services
+            .AddJwtServices(configuration)
             .AddApplicationLayer()
             .AddPersistenceLayer(configuration, isDevelopment);
 
