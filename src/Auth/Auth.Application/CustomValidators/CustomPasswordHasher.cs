@@ -4,51 +4,29 @@ using Auth.Application.Interfaces;
 namespace Auth.Application.CustomValidators;
 
 public class CustomPasswordHasher : IPasswordHasher
-  {
-    private const int SaltSize = 16; // Salt size in bytes
-    private const int HashSize = 32; // Hash size in bytes
-    private const int Iterations = 10000; // Number of iterations for PBKDF2
+{
+    private const int SaltSize = 128 / 8;
+    private const int KeySize = 256 / 8;
+    private const int Iterations = 10000;
+    private static readonly HashAlgorithmName HashAlgorithmName = HashAlgorithmName.SHA256;
+    private const char Delimiter = ';';
 
     public string HashPassword(string password)
     {
-        using (var rng = new RNGCryptoServiceProvider())
-        {
-            var salt = new byte[SaltSize];
-            rng.GetBytes(salt); 
-            
-            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, Iterations, HashAlgorithmName.SHA256))
-            {
-                var hash = pbkdf2.GetBytes(HashSize);
-                var hashBytes = new byte[SaltSize + HashSize];
-                Buffer.BlockCopy(salt, 0, hashBytes, 0, SaltSize);
-                Buffer.BlockCopy(hash, 0, hashBytes, SaltSize, HashSize);
-
-                return Convert.ToBase64String(hashBytes);
-            }
-        }
+       var salt = RandomNumberGenerator.GetBytes(SaltSize);
+       var hash = Rfc2898DeriveBytes.Pbkdf2(password, salt, Iterations, HashAlgorithmName, KeySize);
+       
+       return string.Join(Delimiter.ToString(), Convert.ToBase64String(salt), Convert.ToBase64String(hash));
     }
 
-    public bool VerifyPassword(string password, string hashedPassword)
+    public bool VerifyPassword(string hashedPassword, string password)
     {
-        var hashBytes = Convert.FromBase64String(hashedPassword);
+        var elements = hashedPassword.Split(Delimiter);
+        var salt = Convert.FromBase64String(elements[0]);
+        var hash = Convert.FromBase64String(elements[1]);
 
-        var salt = new byte[SaltSize];
-        Buffer.BlockCopy(hashBytes, 0, salt, 0, SaltSize);
-
-        var storedHash = new byte[HashSize];
-        Buffer.BlockCopy(hashBytes, SaltSize, storedHash, 0, HashSize);
-
-        using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, Iterations, HashAlgorithmName.SHA256))
-        {
-            var computedHash = pbkdf2.GetBytes(HashSize);
-
-            for (var i = 0; i < HashSize; i++)
-            {
-                if (computedHash[i] != storedHash[i])
-                    return false;
-            }
-        }
-
-        return true;
+        var hashInput = Rfc2898DeriveBytes.Pbkdf2(password, salt, Iterations,HashAlgorithmName, KeySize);
+        
+        return CryptographicOperations.FixedTimeEquals(hash, hashInput);
     }
 }
