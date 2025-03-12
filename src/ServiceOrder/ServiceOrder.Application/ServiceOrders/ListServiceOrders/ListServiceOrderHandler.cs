@@ -19,7 +19,9 @@ public class ListServiceOrderHandler(ServiceOrderDbContext context, IValidator<P
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        var serviceOrders = await context.ServiceOrders.ToListAsync(cancellationToken);
+        var serviceOrders = await context.ServiceOrders
+            .Include(s => s.Items)
+            .ToListAsync(cancellationToken);
 
         return PaginatedList<ListServiceOrderResult>.Create(serviceOrders.Adapt<IEnumerable<ListServiceOrderResult>>(),
             request.PageIndex, request.PageSize, cancellationToken);
