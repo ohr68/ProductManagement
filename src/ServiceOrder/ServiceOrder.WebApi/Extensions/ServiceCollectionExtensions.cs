@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProductManagement.Common.Models;
+using ServiceOrder.WebApi.Constants;
 
 namespace ServiceOrder.WebApi.Extensions;
 
@@ -14,7 +15,8 @@ public static class ServiceCollectionExtensions
     {
         services
             .AddAuth(configuration)
-            .AddSwagger(configuration);
+            .AddSwagger(configuration)
+            .ConfigureCors(configuration);
 
         services.AddAuthorization();
         
@@ -80,6 +82,21 @@ public static class ServiceCollectionExtensions
             });
         });
 
+        return services;
+    }
+    
+    private static IServiceCollection ConfigureCors(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddCors(options =>
+        {
+            options.AddPolicy(Configuration.AllowProductManagementClient, policy =>
+            {
+                policy.WithOrigins(configuration.GetSection("AllowedClients:ProductManagement").Value!)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+        });
+        
         return services;
     }
 }

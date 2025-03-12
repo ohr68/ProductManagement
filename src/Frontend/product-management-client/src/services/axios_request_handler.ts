@@ -1,6 +1,7 @@
+import store from '@/store';
 import type { ApiResponse } from '@/types/api_response';
 import type { ProblemDetails } from '@/types/problem_details';
-import axios, { type AxiosInstance, type AxiosRequestConfig, type AxiosResponse } from 'axios';
+import axios, { AxiosError, type AxiosInstance, type AxiosRequestConfig, type AxiosResponse } from 'axios';
 
 class AxiosRequestHandler {
     private axiosInstance: AxiosInstance;
@@ -15,44 +16,54 @@ class AxiosRequestHandler {
         });
     }
 
-    async request<T>(method: 'GET' | 'POST' | 'PUT' | 'DELETE', url: string, data?: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
+    async request<TData, TResponse>(method: 'GET' | 'POST' | 'PUT' | 'DELETE', url: string, data?: TData, params?: TData, config?: AxiosRequestConfig): Promise<ApiResponse<TResponse>> {
         try {
-            const response: AxiosResponse<ApiResponse<T>> = await this.axiosInstance({
+
+            const token = store.state.accessToken;
+
+            const authHeaders = token ? { 'Authorization': `Bearer ${token}` } : {};
+    
+            const response: AxiosResponse<ApiResponse<TResponse>> = await this.axiosInstance({
                 method,
                 url,
                 data,
+                params,
+                headers: {
+                    ...authHeaders,
+                    ...config?.headers,
+                  },
                 ...config,
             });
 
             return response.data;
 
         } catch (error) {
-            throw this.handleError(error);
+            throw this.handleError(error as AxiosError);
         }
     }
 
-    async get<T>(url: string, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
-        return this.request<T>('GET', url, undefined, config);
+    async get<TData, TResponse>(url: string, params: TData, config?: AxiosRequestConfig): Promise<ApiResponse<TResponse>> {
+        return this.request<TData, TResponse>('GET', url, undefined, params, config);
     }
 
-    async post<T>(url: string, data: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
-        return this.request<T>('POST', url, data, config);
+    async post<TData, TResponse>(url: string, data: TData, config?: AxiosRequestConfig): Promise<ApiResponse<TResponse>> {
+        return this.request<TData, TResponse>('POST', url, data, undefined, config);
     }
 
-    async put<T>(url: string, data: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
-        return this.request<T>('PUT', url, data, config);
+    async put<TData, TResponse>(url: string, data: TData, config?: AxiosRequestConfig): Promise<ApiResponse<TResponse>> {
+        return this.request<TData, TResponse>('PUT', url, data, undefined, config);
     }
 
-    async delete<T>(url: string, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
-        return this.request<T>('DELETE', url, undefined, config);
+    async delete<TData, TResponse>(url: string, config?: AxiosRequestConfig): Promise<ApiResponse<TResponse>> {
+        return this.request<TData, TResponse>('DELETE', url, undefined, undefined, config);
     }
 
-    private handleError(error: any): ProblemDetails {
+    private handleError(error: AxiosError): ProblemDetails {
         if (axios.isAxiosError(error)) {
             if (error.response) {
                 console.error('Error Response:', error.response);
 
-                const problemDetails: ProblemDetails = error.response.data;
+                const problemDetails: ProblemDetails = error.response.data as ProblemDetails;
 
                 return problemDetails;
             } else if (error.request) {

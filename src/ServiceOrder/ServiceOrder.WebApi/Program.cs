@@ -4,6 +4,7 @@ using ProductManagement.Common.Logging;
 using Serilog;
 using ServiceOrder.IoC;
 using ServiceOrder.ORM.Context;
+using ServiceOrder.WebApi.Constants;
 using ServiceOrder.WebApi.Extensions;
 
 public class Program
@@ -48,7 +49,8 @@ public class Program
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseHttpsRedirection();
-            app.UseBasicHealthChecks();
+            app.UseBasicHealthChecks(); 
+            app.UseCors(Configuration.AllowProductManagementClient);
             app.MapControllers();
 
             // When the app runs, it first creates the Database.

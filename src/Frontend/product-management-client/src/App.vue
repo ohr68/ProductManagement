@@ -1,17 +1,30 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import MenuBar from './components/MenuBar.vue'
-import store from './store'
+import { RouterView } from 'vue-router';
+import { useToast } from 'primevue/usetoast';
+import MenuBar from './components/MenuBar.vue';
+import type { User } from '@/types/User';
+import store from './store';
 
+const toast = useToast();
+
+const onLogout = (user: User) => {
+  store.clearUser();
+  toast.add({
+    severity: 'success',
+    summary: `Até logo, ${user.userName}`,
+    detail: 'Logout efetuado com sucesso.',
+    life: 3000
+  });
+}
 </script>
 
 <template>
-  <div class="flex flex-column min-h-screen">
+  <div class="flex flex-column w-full min-h-screen">
     <header>
-      <MenuBar v-if="store.state.user" />
+      <MenuBar v-if="store.state.user" :user="store.state.user" @logout="onLogout" />
     </header>
-    
-    <main class="flex flex-grow-1 justify-content-center align-items-center w-full overflow-hidden">
+
+    <main class="flex flex-grow-1 min-w-full min-h-full p-6 overflow-hidden">
       <RouterView />
     </main>
   </div>

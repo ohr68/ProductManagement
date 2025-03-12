@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Auth.ORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c9bfb3bb99a20592658e3c82b88d3d201f9b87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9b2c6314d4881d930be46d33ed736210d699d12")]
 [assembly: System.Reflection.AssemblyProductAttribute("Auth.ORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Auth.ORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
