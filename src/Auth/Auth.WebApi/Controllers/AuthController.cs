@@ -9,7 +9,7 @@ namespace Auth.WebApi.Controllers;
 /// <summary>
 /// Controller responsável por gerenciar as operações relacionadas à login e registro de usuário
 /// </summary>
-/// <param name="mediator"></param>
+/// <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
 [ApiController]
 [Route("api/[controller]")]
 public class AuthController(IMediator mediator) : BaseController
@@ -20,7 +20,7 @@ public class AuthController(IMediator mediator) : BaseController
     /// </summary>
     /// <param name="command">Modelo da requisição contendo os dados para login</param>
     /// <param name="cancellationToken"></param>
-    /// <returns></returns>
+    /// <returns>Resultado da operação de login com o token gerado</returns>
     [HttpPost("login")]
     [ProducesResponseType(typeof(ApiResponseWithData<AuthResult>), StatusCodes.Status200OK, contentType: "application/json")]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest, contentType: "application/json")]
@@ -37,7 +37,7 @@ public class AuthController(IMediator mediator) : BaseController
     /// </summary>
     /// <param name="command">Modelo da requisição de criação de um novo usuário</param>
     /// <param name="cancellationToken"></param>
-    /// <returns></returns>
+    /// <returns>Resultado da operação de cadastro com o Id do usuário</returns>
     [HttpPost("register")]
     [ProducesResponseType(typeof(ApiResponseWithData<CreateUserResult>), StatusCodes.Status201Created, contentType: "application/json")]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest, contentType: "application/json")]

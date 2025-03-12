@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using Mapster;
 using MediatR;
+using ProductManagement.Common.Models;
 using ProductManagement.Common.WebApi;
-using Products.Application.Models;
 using Products.Domain.Entities;
 using Products.Domain.Interfaces;
 

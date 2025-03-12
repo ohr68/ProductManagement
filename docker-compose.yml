@@ -1,0 +1,188 @@
+services:
+  auth.api:
+    container_name: auth_api
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: .
+      dockerfile: src/Auth/Auth.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Senha@123
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=80
+      - ASPNETCORE_HTTPS_PORTS=443
+      - ConnectionStrings__Auth=Server=auth_database;Database=AuthDb;User Id=sa;Password=Senha@123;Encrypt=True;TrustServerCertificate=True;
+    ports:
+      - "5000:80"
+      - "5001:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${USERPROFILE}\.aspnet\https:/https:ro
+    depends_on:
+      auth.database:
+        condition: service_started
+    networks:
+      - product_management_network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "https://localhost:5001/health" ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+    command: sh -c "sleep 10 && dotnet ef database update && dotnet Auth.WebApi.dll"
+  
+  auth.database:
+    container_name: auth_database
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Senha@123
+    ports:
+      - "1433:1433"
+    networks:
+      - product_management_network
+    volumes:
+      - authdatabase-data:/var/opt/mssql
+    healthcheck:
+      test: [ "CMD-SHELL", "echo 'SELECT 1' | /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Senha@123" ]
+      interval: 10s
+      retries: 5
+
+  products.api:
+    container_name: products_api
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: src/Products/Products.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=https://+:5003;http://+:5002
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Senha@123
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=5002
+      - ASPNETCORE_HTTPS_PORTS=5003
+      - ConnectionStrings__Products=Server=products_database;Database=Products;User Id=sa;Password=Senha@123;TrustServerCertificate=True;
+    ports:
+      - "5002:5002"
+      - "5003:5003"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${USERPROFILE}\.aspnet\https:/https:ro
+    depends_on:
+      products.database:
+        condition: service_started
+      auth.api:
+        condition: service_healthy
+    networks:
+      - product_management_network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "https://localhost:5003/health" ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+    command: sh -c "sleep 10 && dotnet ef database update && dotnet Products.WebApi.dll"
+
+  products.database:
+    container_name: products_database
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: Products
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: Senha@123
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - product_management_network
+    volumes:
+      - productsdatabase-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "sa", "-d", "Products" ]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+  
+  
+  service.orders.api:
+    container_name: service_orders_api
+    image: ${DOCKER_REGISTRY-}serviceordersapi
+    build:
+      context: .
+      dockerfile: src/ServiceOrder/ServiceOrder.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=https://+:5005;http://+:5004
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Senha@123
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=5004
+      - ASPNETCORE_HTTPS_PORTS=5005
+      - ConnectionStrings__ServiceOrder=Server=service_orders_database;Database=ServiceOrder;User Id=sa;Password=Senha@123;Encrypt=True;TrustServerCertificate=True;
+    ports:
+      - "5004:5004"
+      - "5005:5005"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${USERPROFILE}\.aspnet\https:/https:ro
+    depends_on:
+      service.orders.database:
+        condition: service_started
+      auth.api:
+        condition: service_healthy
+    networks:
+      - product_management_network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "https://localhost:5005/health" ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+    command: sh -c "sleep 10 && dotnet ef database update && dotnet ServiceOrder.WebApi.dll"
+    
+  service.orders.database:
+    container_name: service_orders_database
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Senha@123
+    ports:
+      - "1434:1434"
+    networks:
+      - product_management_network
+    volumes:
+      - serviceordersdatabase-data:/var/opt/mssql
+    healthcheck:
+      test: [ "CMD-SHELL", "echo 'SELECT 1' | /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Senha@123" ]
+      interval: 10s
+      retries: 5
+
+  product.management.rabbitmq:
+    image: masstransit/rabbitmq
+    container_name: product_management_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - product_management_network
+
+networks:
+  product_management_network:
+    driver: bridge
+
+volumes:
+  serviceordersdatabase-data:
+  authdatabase-data:
+  productsdatabase-data:

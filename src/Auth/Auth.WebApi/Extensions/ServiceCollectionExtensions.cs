@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Text;
-using Auth.Jwt.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;

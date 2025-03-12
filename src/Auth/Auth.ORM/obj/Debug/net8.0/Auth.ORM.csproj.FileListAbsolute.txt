@@ -1,0 +1,16 @@
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\bin\Debug\net8.0\Auth.ORM.deps.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\bin\Debug\net8.0\Auth.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\bin\Debug\net8.0\Auth.ORM.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\bin\Debug\net8.0\Auth.Domain.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\bin\Debug\net8.0\Auth.Domain.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.csproj.AssemblyReference.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.AssemblyInfoInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.AssemblyInfo.cs
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.csproj.CoreCompileInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.sourcelink.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.csproj.Up2Date
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\refint\Auth.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\Auth.ORM.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.ORM\obj\Debug\net8.0\ref\Auth.ORM.dll

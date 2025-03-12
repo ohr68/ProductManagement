@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
+using ProductManagement.Common.Models;
 
 namespace Products.Application.Extensions;
 
@@ -34,7 +35,10 @@ public static class ServiceCollectionExtensions
 
     private static IServiceCollection AddValidation(this IServiceCollection services)
     {
-        services.AddValidatorsFromAssembly(typeof(ApplicationLayer).Assembly);
+        services.AddValidatorsFromAssemblies([
+            typeof(ApplicationLayer).Assembly,
+            typeof(PagedRequestInputModelValidator).Assembly
+        ]);
         return services;
     }
 }

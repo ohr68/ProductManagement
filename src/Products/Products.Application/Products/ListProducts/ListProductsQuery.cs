@@ -1,6 +1,6 @@
 ﻿using MediatR;
+using ProductManagement.Common.Models;
 using ProductManagement.Common.WebApi;
-using Products.Application.Models;
 
 namespace Products.Application.Products.ListProducts;
 

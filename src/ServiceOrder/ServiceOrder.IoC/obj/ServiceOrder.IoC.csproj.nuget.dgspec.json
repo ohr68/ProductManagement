@@ -1,0 +1,454 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.IoC\\ServiceOrder.IoC.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj",
+        "projectName": "ProductManagement.Common",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.7, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Exceptions.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\ServiceOrder.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\ServiceOrder.Application.csproj",
+        "projectName": "ServiceOrder.Application",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\ServiceOrder.Application.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "MassTransit.Abstractions": {
+              "target": "Package",
+              "version": "[8.3.7, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj",
+        "projectName": "ServiceOrder.Domain",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.IoC\\ServiceOrder.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.IoC\\ServiceOrder.IoC.csproj",
+        "projectName": "ServiceOrder.IoC",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.IoC\\ServiceOrder.IoC.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\ServiceOrder.Application.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Application\\ServiceOrder.Application.csproj"
+              },
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.7, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj",
+        "projectName": "ServiceOrder.ORM",
+        "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\ServiceOrder.ORM.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.ORM\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.Domain\\ServiceOrder.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
