@@ -1,4 +1,5 @@
-﻿using Mapster;
+﻿using System.Text.Json;
+using Mapster;
 using MassTransit;
 using Products.Domain.Messaging.Products;
 using Serilog;
@@ -14,6 +15,7 @@ public class ProductCreatedConsumer(ServiceOrderDbContext dbContext) : IConsumer
         Log.Information("Processando mensagem {messageId}.", context.Message.CorrelationId);
 
         var product = context.Message;
+        
         var serviceOrderItem = product.Adapt<ServiceOrderItem>();
 
         var serviceOrder = new Domain.Entities.ServiceOrder(new List<ServiceOrderItem> { serviceOrderItem });
@@ -25,6 +27,7 @@ public class ProductCreatedConsumer(ServiceOrderDbContext dbContext) : IConsumer
         var success = await dbContext.SaveChangesAsync(context.CancellationToken) > 0;
 
         if (!success)
-            Log.Error("Ocorreu uma falha ao inserir a ordem de serviço. CorrelationId da mensagem: {correlationId}", context.CorrelationId);
+            Log.Error("Ocorreu uma falha ao inserir a ordem de serviço. CorrelationId da mensagem: {correlationId}",
+                context.CorrelationId);
     }
 }

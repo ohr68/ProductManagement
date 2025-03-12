@@ -65,7 +65,7 @@ public static class ServiceCollectionExtensions
                 Scheme = "Bearer",
                 BearerFormat = "JWT",
                 In = ParameterLocation.Header,
-                Description = "Digite 'Bearer {token}' na caixa de texto abaixo.\nExemplo: 'Bearer seu_token_aqui'"
+                Description = "Informe o token na caixa de texto abaixo.\nExemplo: 'seu_token_aqui'"
             });
 
             options.AddSecurityRequirement(new OpenApiSecurityRequirement

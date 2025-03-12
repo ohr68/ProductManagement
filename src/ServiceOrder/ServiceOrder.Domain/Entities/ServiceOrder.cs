@@ -20,7 +20,7 @@ public class ServiceOrder
     public ServiceOrder(IEnumerable<ServiceOrderItem> items)
     {
         Created();
-        SetTotalPrice();
+        SetTotalPrice(items);
     }
 
     private void Created()
@@ -29,8 +29,9 @@ public class ServiceOrder
         CreatedAt = DateTime.UtcNow;
     }
 
-    private void SetTotalPrice()
+    private void SetTotalPrice(IEnumerable<ServiceOrderItem> items)
     {
+        Items = items.ToList();
         TotalPrice = Items!.Sum(x => x.Price);
     }
 }

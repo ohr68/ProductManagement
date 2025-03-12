@@ -75,7 +75,9 @@ services:
       products.database:
         condition: service_started
       auth.api:
-        condition: service_healthy
+        condition: service_started
+      product.management.rabbitmq:
+        condition: service_started
     networks:
       - product_management_network
     healthcheck:
@@ -133,7 +135,9 @@ services:
       service.orders.database:
         condition: service_started
       auth.api:
-        condition: service_healthy
+        condition: service_started
+      product.management.rabbitmq:
+        condition: service_started
     networks:
       - product_management_network
     healthcheck:

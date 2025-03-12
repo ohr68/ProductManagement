@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Products.Domain.Entities;
 using Products.Domain.Interfaces;
 using Products.ORM.Context;
@@ -41,7 +42,7 @@ public static class ServiceCollectionExtensions
                     connectionString = string.Format(connectionString, password);
                 }
 
-                options.UseNpgsql(connectionString);
+                options.UseNpgsql(connectionString).LogTo(Console.WriteLine, LogLevel.Information);
             });
 
         return services;

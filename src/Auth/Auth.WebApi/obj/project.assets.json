@@ -5547,9 +5547,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\ProductManagement.Common\\ProductManagement.Common.csproj": {
-              "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\ProductManagement.Common\\ProductManagement.Common.csproj"
-            },
             "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.IoC\\Auth.IoC.csproj": {
               "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.IoC\\Auth.IoC.csproj"
             },
