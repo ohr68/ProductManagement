@@ -2,9 +2,9 @@
 using System.Security.Claims;
 using System.Text;
 using Auth.Jwt.Interfaces;
-using Auth.Jwt.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using ProductManagement.Common.Models;
 
 namespace Auth.Jwt.Services;
 

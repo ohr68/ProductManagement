@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Products.WebApi.Controllers.ProductsController">
+            <summary>
+            Controller responsável por gerenciar as operações relacionadas à produtos
+            </summary>
+            <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
+        </member>
+        <member name="M:Products.WebApi.Controllers.ProductsController.#ctor(MediatR.IMediator)">
+            <summary>
+            Controller responsável por gerenciar as operações relacionadas à produtos
+            </summary>
+            <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
+        </member>
+        <member name="M:Products.WebApi.Controllers.ProductsController.List(Products.Application.Products.ListProducts.ListProductsQuery,System.Threading.CancellationToken)">
+            <summary>
+            Lista os produtos de forma paginada
+            </summary>
+            <param name="query">Modelo de requisição paginada</param>
+            <param name="cancellationToken"></param>
+            <returns>Lista paginada com os produtos encontrados</returns>
+        </member>
+        <member name="M:Products.WebApi.Controllers.ProductsController.Create(Products.Application.Products.CreateProduct.CreateProductCommand,System.Threading.CancellationToken)">
+            <summary>
+            Cadastra um novo produto
+            </summary>
+            <param name="command">Modelo de requisição contendo os dados do produto a ser cadastrado</param>
+            <param name="cancellationToken"></param>
+            <returns>Resultado da operação de insert com o Id do produto inserido</returns>
+        </member>
+    </members>
+</doc>

@@ -10,7 +10,7 @@ namespace Products.WebApi.Controllers;
 /// <summary>
 /// Controller responsável por gerenciar as operações relacionadas à produtos
 /// </summary>
-/// <param name="mediator"></param>
+/// <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]

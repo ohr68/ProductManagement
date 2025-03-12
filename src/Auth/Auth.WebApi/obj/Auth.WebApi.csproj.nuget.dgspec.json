@@ -374,7 +374,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj": {
+                "projectPath": "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Common\\ProductManagement.Common\\ProductManagement.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -395,14 +399,6 @@
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[9.0.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Options": {
-              "target": "Package",
-              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
@@ -662,6 +658,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[8.3.7, )"

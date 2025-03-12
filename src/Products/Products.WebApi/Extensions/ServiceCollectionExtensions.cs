@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using System.Text;
-using Auth.Jwt.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ProductManagement.Common.Models;
 
 namespace Products.WebApi.Extensions;
 
@@ -51,7 +51,7 @@ public static class ServiceCollectionExtensions
             options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Version = "v1",
-                Title = "Products Web Web API",
+                Title = "Products Web API",
                 Description = ""
             });
 

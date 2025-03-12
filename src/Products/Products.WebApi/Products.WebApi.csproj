@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,9 +20,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Auth\Auth.Jwt\Auth.Jwt.csproj" />
       <ProjectReference Include="..\..\Common\ProductManagement.Common\ProductManagement.Common.csproj" />
       <ProjectReference Include="..\Products.IoC\Products.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

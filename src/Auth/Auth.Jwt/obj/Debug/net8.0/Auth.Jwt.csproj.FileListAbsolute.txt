@@ -1,0 +1,16 @@
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\bin\Debug\net8.0\Auth.Jwt.deps.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\bin\Debug\net8.0\Auth.Jwt.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\bin\Debug\net8.0\Auth.Jwt.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.csproj.AssemblyReference.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.AssemblyInfoInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.AssemblyInfo.cs
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.csproj.CoreCompileInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.sourcelink.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\refint\Auth.Jwt.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\ref\Auth.Jwt.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\bin\Debug\net8.0\ProductManagement.Common.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\bin\Debug\net8.0\ProductManagement.Common.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Auth\Auth.Jwt\obj\Debug\net8.0\Auth.Jwt.csproj.Up2Date

@@ -1,4 +1,5 @@
-﻿using Auth.ORM.Context;
+﻿using Auth.Application.Interfaces;
+using Auth.ORM.Context;
 using FluentValidation;
 using Mapster;
 using MediatR;
@@ -6,7 +7,7 @@ using ProductManagement.Common.Exceptions;
 
 namespace Auth.Application.User.CreateUser;
 
-public class CreateUserCommandHandler(AuthDbContext context, IValidator<CreateUserCommand> validator) : IRequestHandler<CreateUserCommand, CreateUserResult>
+public class CreateUserCommandHandler(AuthDbContext context, IPasswordHasher passwordHasher, IValidator<CreateUserCommand> validator) : IRequestHandler<CreateUserCommand, CreateUserResult>
 {
     public async Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
@@ -16,6 +17,7 @@ public class CreateUserCommandHandler(AuthDbContext context, IValidator<CreateUs
             throw new ValidationException(validationResult.Errors);
         
         var user = request.Adapt<Domain.Entities.User>();
+        user.Password = passwordHasher.HashPassword(user.Password!);
         
         await context.Users.AddAsync(user, cancellationToken);
      
