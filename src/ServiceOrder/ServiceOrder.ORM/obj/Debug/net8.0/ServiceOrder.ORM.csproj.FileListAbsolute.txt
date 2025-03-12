@@ -1,0 +1,16 @@
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\bin\Debug\net8.0\ServiceOrder.ORM.deps.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\bin\Debug\net8.0\ServiceOrder.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\bin\Debug\net8.0\ServiceOrder.ORM.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\bin\Debug\net8.0\ServiceOrder.Domain.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\bin\Debug\net8.0\ServiceOrder.Domain.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.csproj.AssemblyReference.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.AssemblyInfoInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.AssemblyInfo.cs
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.csproj.CoreCompileInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.sourcelink.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceO.2783E89C.Up2Date
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\refint\ServiceOrder.ORM.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ServiceOrder.ORM.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.ORM\obj\Debug\net8.0\ref\ServiceOrder.ORM.dll

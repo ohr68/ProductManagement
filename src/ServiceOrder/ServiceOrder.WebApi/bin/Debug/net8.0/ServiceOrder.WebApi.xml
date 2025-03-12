@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceOrder.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:ServiceOrder.WebApi.Controllers.ServiceOrdersController">
+            <summary>
+            Controller responsável por gerenciar as operações relacionadas à ordens de serviço
+            </summary>
+            <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
+        </member>
+        <member name="M:ServiceOrder.WebApi.Controllers.ServiceOrdersController.#ctor(MediatR.IMediator)">
+            <summary>
+            Controller responsável por gerenciar as operações relacionadas à ordens de serviço
+            </summary>
+            <param name="mediator">Responsável por enviar os comandos e queries para seus respectivos handlers conforme contratos</param>
+        </member>
+        <member name="M:ServiceOrder.WebApi.Controllers.ServiceOrdersController.List(ServiceOrder.Application.ServiceOrders.ListServiceOrders.ListServiceOrderQuery,System.Threading.CancellationToken)">
+            <summary>
+            Lista as ordens de serviço de forma paginada
+            </summary>
+            <param name="query">Modelo de requisição paginada</param>
+            <param name="cancellationToken"></param>
+            <returns>Lista paginada com as ordens de serviço encontradas</returns>
+        </member>
+    </members>
+</doc>

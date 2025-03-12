@@ -1,0 +1,56 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  auth.api:
+    build:
+      context: "C:\\Users\\Otavio\\RiderProjects\\ProductManagement"
+      dockerfile: "src/Auth/Auth.WebApi/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Auth.WebApi.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "authapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Auth\\Auth.WebApi:/app:rw"
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement:/src:rw"
+    - "C:\\Users\\Otavio\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  products.api:
+    build:
+      context: "C:\\Users\\Otavio\\RiderProjects\\ProductManagement"
+      dockerfile: "src/Products/Products.WebApi/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Products.WebApi.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "productsapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\Products\\Products.WebApi:/app:rw"
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement:/src:rw"
+    - "C:\\Users\\Otavio\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  service.orders.api:
+    build:
+      context: "C:\\Users\\Otavio\\RiderProjects\\ProductManagement"
+      dockerfile: "src/ServiceOrder/ServiceOrder.WebApi/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/ServiceOrder.WebApi.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "serviceordersapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement\\src\\ServiceOrder\\ServiceOrder.WebApi:/app:rw"
+    - "C:\\Users\\Otavio\\RiderProjects\\ProductManagement:/src:rw"
+    - "C:\\Users\\Otavio\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
