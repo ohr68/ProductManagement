@@ -1,5 +1,6 @@
 using Auth.IoC;
 using Auth.ORM.Context;
+using Auth.WebApi.Constants;
 using Auth.WebApi.Extensions;
 using ProductManagement.Common.Filters;
 using ProductManagement.Common.HealthChecks;
@@ -47,6 +48,7 @@ public class Program
 
             app.UseHttpsRedirection();
             app.UseBasicHealthChecks();
+            app.UseCors(Configuration.AllowProductManagementClient);
             app.MapControllers();
 
             // When the app runs, it first creates the Database.

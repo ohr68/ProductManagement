@@ -74,8 +74,6 @@ services:
     depends_on:
       products.database:
         condition: service_started
-      auth.api:
-        condition: service_started
       product.management.rabbitmq:
         condition: service_started
     networks:
@@ -133,8 +131,6 @@ services:
       - ${USERPROFILE}\.aspnet\https:/https:ro
     depends_on:
       service.orders.database:
-        condition: service_started
-      auth.api:
         condition: service_started
       product.management.rabbitmq:
         condition: service_started

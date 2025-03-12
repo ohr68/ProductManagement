@@ -1,6 +1,6 @@
 ﻿namespace Auth.WebApi.Constants;
 
-public class Configuration
+public static class Configuration
 {
-    
+    public const string AllowProductManagementClient = "AllowProductManagementClient";
 }

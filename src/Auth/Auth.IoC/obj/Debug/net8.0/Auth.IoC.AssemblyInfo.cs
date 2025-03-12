@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Auth.IoC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4edf953100fee22ce21206b75f21654b74a8559c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c9bfb3bb99a20592658e3c82b88d3d201f9b87")]
 [assembly: System.Reflection.AssemblyProductAttribute("Auth.IoC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Auth.IoC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

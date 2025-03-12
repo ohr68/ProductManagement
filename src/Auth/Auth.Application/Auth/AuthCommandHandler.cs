@@ -33,6 +33,6 @@ public class AuthCommandHandler(
 
         var token = jwtService.GenerateToken(request.Username!);
 
-        return new AuthResult(token);
+        return new AuthResult(token, new UserResult(user.Username, user.Email));
     }
 }
