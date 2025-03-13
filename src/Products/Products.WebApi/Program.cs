@@ -3,6 +3,7 @@ using ProductManagement.Common.HealthChecks;
 using ProductManagement.Common.Logging;
 using Products.IoC;
 using Products.ORM.Context;
+using Products.WebApi.Constants;
 using Products.WebApi.Extensions;
 using Serilog;
 
@@ -49,6 +50,7 @@ public class Program
             app.UseAuthorization();
             app.UseHttpsRedirection();
             app.UseBasicHealthChecks();
+            app.UseCors(Configuration.AllowProductManagementClient);
             app.MapControllers();
 
             // When the app runs, it first creates the Database.

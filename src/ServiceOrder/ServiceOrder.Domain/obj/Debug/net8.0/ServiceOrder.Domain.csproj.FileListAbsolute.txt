@@ -1,0 +1,12 @@
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\bin\Debug\net8.0\ServiceOrder.Domain.deps.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\bin\Debug\net8.0\ServiceOrder.Domain.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\bin\Debug\net8.0\ServiceOrder.Domain.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.AssemblyInfoInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.AssemblyInfo.cs
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.sourcelink.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\refint\ServiceOrder.Domain.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ServiceOrder.Domain.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\ServiceOrder\ServiceOrder.Domain\obj\Debug\net8.0\ref\ServiceOrder.Domain.dll

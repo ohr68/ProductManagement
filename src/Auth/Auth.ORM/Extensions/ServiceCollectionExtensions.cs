@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Auth.ORM.Extensions;
 
@@ -37,7 +38,7 @@ public static class ServiceCollectionExtensions
                     connectionString = string.Format(connectionString, password);
                 }
 
-                options.UseSqlServer(connectionString);
+                options.UseSqlServer(connectionString).LogTo(Console.WriteLine, LogLevel.Information);
             });
 
         return services;

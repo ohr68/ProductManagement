@@ -7,7 +7,7 @@
     <ProjectGuid>4af79501-f785-4b98-8ee5-54be186d67a2</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>calculadora.de.cotacoes.api</DockerServiceName>
+    <DockerServiceName>product.management</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
@@ -15,5 +15,11 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".dockerignore">
+      <Link>src\Frontend\product-management-client\.dockerignore</Link>
+      <DependentUpon>Dockerfile</DependentUpon>
+    </Content>
   </ItemGroup>
 </Project>

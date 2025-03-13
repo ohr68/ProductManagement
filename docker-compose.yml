@@ -74,8 +74,6 @@ services:
     depends_on:
       products.database:
         condition: service_started
-      auth.api:
-        condition: service_started
       product.management.rabbitmq:
         condition: service_started
     networks:
@@ -134,8 +132,6 @@ services:
     depends_on:
       service.orders.database:
         condition: service_started
-      auth.api:
-        condition: service_started
       product.management.rabbitmq:
         condition: service_started
     networks:
@@ -179,6 +175,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - product_management_network
+  
+  product.management.client:
+    build:
+      context: .
+      dockerfile: src/Frontend/product-management-client/Dockerfile    
+    container_name: product_management_client
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
     networks:
       - product_management_network
 

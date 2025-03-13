@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gRhAzTV6EzsWk1RIuOpT7rwjGZmfybIb9nOcpYesEug=",
+  "Source": "ServiceOrder.WebApi",
+  "BasePath": "_content/ServiceOrder.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
