@@ -1,0 +1,117 @@
+2025-03-13 00:00:08.282 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:00:08.294 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:08.294 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 12.4715ms
+2025-03-13 00:00:08.297 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 82
+2025-03-13 00:00:08.298 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:08.300 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:08.302 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:00:08.384 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:00:08.387 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-03-13 00:00:08.390 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 86.6349ms
+2025-03-13 00:00:08.391 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:08.392 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 500 null application/problem+json; charset=utf-8 95.1634ms
+2025-03-13 00:00:13.464 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:00:13.465 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:13.466 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 1.8815ms
+2025-03-13 00:00:13.468 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 83
+2025-03-13 00:00:13.469 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:13.470 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:13.471 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:00:13.523 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (7ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:00:13.537 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.User.CreateUser.CreateUserResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:00:13.544 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 72.01ms
+2025-03-13 00:00:13.544 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:13.545 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 201 null application/json; charset=utf-8 77.2884ms
+2025-03-13 00:00:59.490 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:00:59.491 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:59.491 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 1.219ms
+2025-03-13 00:00:59.493 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 72
+2025-03-13 00:00:59.495 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:00:59.495 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:59.495 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:00:59.547 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (4ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:00:59.548 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.User.CreateUser.CreateUserResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:00:59.549 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 52.3724ms
+2025-03-13 00:00:59.550 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:00:59.551 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 201 null application/json; charset=utf-8 57.3291ms
+2025-03-13 00:01:39.410 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:01:39.411 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:01:39.413 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 3.2612ms
+2025-03-13 00:01:39.415 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 72
+2025-03-13 00:01:39.419 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:01:39.420 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:01:39.422 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:01:39.466 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (4ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:01:39.468 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.User.CreateUser.CreateUserResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:01:39.469 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 46.2298ms
+2025-03-13 00:01:39.470 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:01:39.471 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 201 null application/json; charset=utf-8 55.9736ms
+2025-03-13 00:04:19.165 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:04:19.166 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:04:19.167 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 1.3791ms
+2025-03-13 00:04:19.169 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 72
+2025-03-13 00:04:19.169 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:04:19.170 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:04:19.171 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:04:19.220 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (5ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:04:19.224 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.User.CreateUser.CreateUserResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:04:19.225 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 53.3106ms
+2025-03-13 00:04:19.227 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:04:19.228 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 201 null application/json; charset=utf-8 59.4139ms
+2025-03-13 00:05:19.116 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/register - null null
+2025-03-13 00:05:19.117 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:05:19.118 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/register - 204 null null 1.6187ms
+2025-03-13 00:05:19.121 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/register - application/json 73
+2025-03-13 00:05:19.122 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:05:19.122 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:05:19.123 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Registrar", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrar(Auth.Application.User.CreateUser.CreateUserCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:05:19.178 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (5ms) [Parameters=[@p0='?' (Scale = 7) (DbType = DateTime2), @p1='?' (Size = 150) (DbType = AnsiString), @p2='?' (Scale = 7) (DbType = DateTime2), @p3='?' (Size = 8000) (DbType = AnsiString), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [Email], [ModifiedOn], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-03-13 00:05:19.179 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.User.CreateUser.CreateUserResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:05:19.181 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi) in 56.0583ms
+2025-03-13 00:05:19.181 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Registrar (Auth.WebApi)'
+2025-03-13 00:05:19.182 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/register - 201 null application/json; charset=utf-8 60.5992ms
+2025-03-13 00:05:38.292 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5001/api/auth/login - null null
+2025-03-13 00:05:38.292 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:05:38.294 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5001/api/auth/login - 204 null null 1.9794ms
+2025-03-13 00:05:38.296 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 POST https://localhost:5001/api/auth/login - application/json 45
+2025-03-13 00:05:38.296 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-13 00:05:38.297 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Auth.WebApi.Controllers.AuthController.Login (Auth.WebApi)'
+2025-03-13 00:05:38.302 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Application.Auth.AuthCommand, System.Threading.CancellationToken) on controller Auth.WebApi.Controllers.AuthController (Auth.WebApi).
+2025-03-13 00:05:38.481 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__request_Username_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[CreatedOn], [u].[Email], [u].[ModifiedOn], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__request_Username_0
+2025-03-13 00:05:38.571 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'ProductManagement.Common.WebApi.ApiResponseWithData`1[[Auth.Application.Auth.AuthResult, Auth.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 00:05:38.574 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Auth.WebApi.Controllers.AuthController.Login (Auth.WebApi) in 271.4862ms
+2025-03-13 00:05:38.574 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Auth.WebApi.Controllers.AuthController.Login (Auth.WebApi)'
+2025-03-13 00:05:38.575 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 POST https://localhost:5001/api/auth/login - 200 null application/json; charset=utf-8 278.6745ms

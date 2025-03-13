@@ -36,14 +36,14 @@ const onLogout = () => emit('logout', props.user);
 const userMenu = ref();
 const userItems = ref([
     {
-        label: 'Profile',
+        label: 'Perfil',
         icon: 'pi pi-user'
     },
     {
         separator: true
     },
     {
-        label: 'Logout',
+        label: 'Sair',
         icon: 'pi pi-sign-out',
         command: () => { onLogout(); }
     },

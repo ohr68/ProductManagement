@@ -43,8 +43,13 @@ const handleProducts = async (pageIndex: number, pageSize: number) => {
         const details = error as ProblemDetails;
 
         if (details) {
-            const message = new ValidationError(details.detail).formattedMessage;
-            errorMessage.value = message;
+            if (details.status === 422) {
+                const message = new ValidationError(details.detail).formattedMessage;
+                errorMessage.value = message;
+            } else {
+                errorMessage.value = details.detail;
+            }
+
         } else {
             errorMessage.value = 'Ocorreu um erro. Tente novamente.';
         }

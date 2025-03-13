@@ -62,13 +62,16 @@ const handleLogin = async () => {
 <template>
     <div class="flex flex-grow-1 justify-content-center align-items-center">
         <div class="flex flex-column row-gap-5">
+            <div class="flex w-full justify-content-center py-4">
+                <h1 class="text-4xl font-bold" style="color: var(--p-primary-color);">Bem-vindo!</h1>
+            </div>
             <InputGroup>
                 <InputGroupAddon>
                     <i class="pi pi-user"></i>
                 </InputGroupAddon>
                 <FloatLabel>
-                    <InputText id="username" v-model="username" />
-                    <label for="username">Username</label>
+                    <InputText id="username" v-model="username" autofocus fluid />
+                    <label for="username">Usuário</label>
                 </FloatLabel>
             </InputGroup>
             <InputGroup>
@@ -76,12 +79,19 @@ const handleLogin = async () => {
                     <i class="pi pi-lock"></i>
                 </InputGroupAddon>
                 <FloatLabel>
-                    <InputText id="password" type="password" v-model="password" />
-                    <label for="password">Password</label>
+                    <InputText id="password" type="password" v-model="password" fluid />
+                    <label for="password">Senha</label>
                 </FloatLabel>
             </InputGroup>
-
-            <Button label="Login" :disabled="isLoginDisabled" @click="handleLogin" />
+            <div class="flex flex-row w-full justify-content-center gap-2">
+                <div class="flex my">
+                    <span>Não possui um usuário?</span>
+                </div>
+                <div class="flex">
+                    <a class="py-0" href="/register">Cadastrar </a>
+                </div>
+            </div>
+            <Button label="Entrar" :disabled="isLoginDisabled" @click="handleLogin" />
         </div>
     </div>
 </template>
