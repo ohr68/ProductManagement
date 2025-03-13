@@ -177,6 +177,18 @@ services:
       retries: 5
     networks:
       - product_management_network
+  
+  product.management.client:
+    build:
+      context: .
+      dockerfile: src/Frontend/product-management-client/Dockerfile    
+    container_name: product_management_client
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - product_management_network
 
 networks:
   product_management_network:
