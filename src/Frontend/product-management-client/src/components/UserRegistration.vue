@@ -79,7 +79,7 @@ const onSubmit = async () => {
 const redirectToLogin = () => {
     setTimeout(() => {
         router.push('/');
-    }, 4000);
+    }, 3000);
 };
 
 </script>

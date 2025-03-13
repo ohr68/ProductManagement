@@ -4,6 +4,7 @@ import Avatar from 'primevue/avatar';
 import TieredMenu from 'primevue/tieredmenu';
 import { ref, type PropType } from "vue";
 import type { User } from '@/types/User';
+import { label } from '@primeuix/themes/aura/metergroup';
 
 const items = ref([
     {
@@ -14,7 +15,15 @@ const items = ref([
     {
         label: 'Produtos',
         icon: 'pi pi-box',
-        route: '/products'
+        items: [
+            {
+                label: 'Consultar',
+                route: '/products'
+            },
+            {
+                label: 'Cadastrar',
+                route: '/products/create'
+            }]
     },
     {
         label: 'Ordens de Serviço',
@@ -43,7 +52,7 @@ const userItems = ref([
         separator: true
     },
     {
-        label: 'Sair',
+        label: 'Logout',
         icon: 'pi pi-sign-out',
         command: () => { onLogout(); }
     },

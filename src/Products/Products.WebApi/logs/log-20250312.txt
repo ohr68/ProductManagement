@@ -8233,3 +8233,45 @@ FROM "Products" AS p
 2025-03-12 22:56:38.378 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Products.WebApi.Controllers.ProductsController.List (Products.WebApi) in 6.0613ms
 2025-03-12 22:56:38.380 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
 2025-03-12 22:56:38.383 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 200 null application/json; charset=utf-8 23.6416ms
+2025-03-12 23:06:57.106 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:06:57.107 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:06:57.110 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 204 null null 4.7372ms
+2025-03-12 23:06:57.113 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:06:57.113 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:06:57.115 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:06:57.119 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "List", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Products.Application.Products.ListProducts.ListProductsQuery, System.Threading.CancellationToken) on controller Products.WebApi.Controllers.ProductsController (Products.WebApi).
+2025-03-12 23:06:57.125 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt"
+FROM "Products" AS p
+2025-03-12 23:06:57.126 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'ProductManagement.Common.WebApi.PaginatedListResponse`1[[Products.Application.Products.ListProducts.ListProductsResult, Products.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-12 23:06:57.128 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Products.WebApi.Controllers.ProductsController.List (Products.WebApi) in 8.5634ms
+2025-03-12 23:06:57.129 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:06:57.130 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 200 null application/json; charset=utf-8 17.6725ms
+2025-03-12 23:13:16.193 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:13:16.194 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:13:16.195 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 204 null null 1.6357ms
+2025-03-12 23:13:16.197 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:13:16.198 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:13:16.199 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:13:16.200 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "List", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Products.Application.Products.ListProducts.ListProductsQuery, System.Threading.CancellationToken) on controller Products.WebApi.Controllers.ProductsController (Products.WebApi).
+2025-03-12 23:13:16.206 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt"
+FROM "Products" AS p
+2025-03-12 23:13:16.207 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'ProductManagement.Common.WebApi.PaginatedListResponse`1[[Products.Application.Products.ListProducts.ListProductsResult, Products.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-12 23:13:16.207 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Products.WebApi.Controllers.ProductsController.List (Products.WebApi) in 6.7136ms
+2025-03-12 23:13:16.208 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:13:16.210 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 200 null application/json; charset=utf-8 12.6209ms
+2025-03-12 23:13:25.517 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:13:25.518 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:13:25.518 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 OPTIONS https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 204 null null 1.1312ms
+2025-03-12 23:13:25.521 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - null null
+2025-03-12 23:13:25.522 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-03-12 23:13:25.523 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:13:25.524 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "List", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Products.Application.Products.ListProducts.ListProductsQuery, System.Threading.CancellationToken) on controller Products.WebApi.Controllers.ProductsController (Products.WebApi).
+2025-03-12 23:13:25.530 +00:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt"
+FROM "Products" AS p
+2025-03-12 23:13:25.531 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'ProductManagement.Common.WebApi.PaginatedListResponse`1[[Products.Application.Products.ListProducts.ListProductsResult, Products.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-12 23:13:25.532 +00:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Products.WebApi.Controllers.ProductsController.List (Products.WebApi) in 5.746ms
+2025-03-12 23:13:25.533 +00:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Products.WebApi.Controllers.ProductsController.List (Products.WebApi)'
+2025-03-12 23:13:25.533 +00:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/2 GET https://localhost:5003/api/products?pageIndex=1&pageSize=10 - 200 null application/json; charset=utf-8 12.213ms
