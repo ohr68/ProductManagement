@@ -4,7 +4,6 @@ import Avatar from 'primevue/avatar';
 import TieredMenu from 'primevue/tieredmenu';
 import { ref, type PropType } from "vue";
 import type { User } from '@/types/User';
-import { label } from '@primeuix/themes/aura/metergroup';
 
 const items = ref([
     {
@@ -44,13 +43,6 @@ const onLogout = () => emit('logout', props.user);
 
 const userMenu = ref();
 const userItems = ref([
-    {
-        label: 'Perfil',
-        icon: 'pi pi-user'
-    },
-    {
-        separator: true
-    },
     {
         label: 'Logout',
         icon: 'pi pi-sign-out',

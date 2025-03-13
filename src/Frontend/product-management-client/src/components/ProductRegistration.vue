@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import InputText from 'primevue/inputtext';
 import InputNumber from 'primevue/inputnumber';
 import Button from 'primevue/button';
@@ -20,6 +20,7 @@ const formData = ref({
 const errorMessage = ref<string>('');
 const toast = useToast();
 const router = useRouter();
+const isSubmitDisabled = computed(() => !formData.value.name || !formData.value.description || !formData.value.price);
 
 const onSubmit = async () => {
     try {
@@ -113,7 +114,7 @@ const redirectToIndex = () => {
                 <div class="field grid">
                     <div class="col-12 md-9 offset-md-3">
                         <Button label="Cadastrar" icon="pi pi-check" type="submit"
-                            class="button-lg button-primary w-full" />
+                            class="button-lg button-primary w-full" :disabled="isSubmitDisabled" />
                     </div>
                 </div>
             </form>

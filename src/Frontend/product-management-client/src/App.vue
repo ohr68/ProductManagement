@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, useRouter } from 'vue-router';
 import { useToast } from 'primevue/usetoast';
 import MenuBar from './components/MenuBar.vue';
 import type { User } from '@/types/User';
 import store from './store';
 
 const toast = useToast();
+const router = useRouter();
 
 const onLogout = (user: User) => {
   store.clearUser();
@@ -15,6 +16,10 @@ const onLogout = (user: User) => {
     detail: 'Logout efetuado com sucesso.',
     life: 3000
   });
+
+  setTimeout(() => {
+    router.push('/');
+  }, 500);
 }
 </script>
 

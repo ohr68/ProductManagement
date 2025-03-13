@@ -11,8 +11,7 @@ import store from '../store';
     <template #title>Bem-vindo, {{ store.state.user.userName }}!</template>
     <template #content>
       <p class="m-0">
-        Nesse projeto é possível efetuar ações como: criar e listar produtos, listar ordens de serviço e visualizar
-        dados do seu perfil.
+        Nesse projeto é possível efetuar ações como: criar e listar produtos e listar ordens de serviço.
       </p>
     </template>
   </Card>
