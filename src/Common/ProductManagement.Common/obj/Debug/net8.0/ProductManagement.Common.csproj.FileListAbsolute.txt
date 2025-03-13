@@ -1,0 +1,13 @@
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\bin\Debug\net8.0\ProductManagement.Common.deps.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\bin\Debug\net8.0\ProductManagement.Common.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\bin\Debug\net8.0\ProductManagement.Common.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.csproj.AssemblyReference.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.AssemblyInfoInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.AssemblyInfo.cs
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.csproj.CoreCompileInputs.cache
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.sourcelink.json
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\refint\ProductManagement.Common.dll
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ProductManagement.Common.pdb
+C:\Users\Otavio\RiderProjects\ProductManagement\src\Common\ProductManagement.Common\obj\Debug\net8.0\ref\ProductManagement.Common.dll
